@@ -1,0 +1,267 @@
+/* --- CONFIGURAÇÕES E PALETA AESTHETIC --- */
+:root {
+    --verde-musgo: #2d4a22;
+    --verde-pop: #4ade80;
+    --amareteiga: #fef08a;
+    --amarelo-manteiga: #fef08a;
+    --amarelo-sticker: #fde047;
+    --azul-ceu: #bae6fd;
+    --azul-sticker: #38bdf8;
+    --branco: #ffffff;
+    --grafite: #1e293b;
+    --borda-sticker: #000000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+body {
+    background-color: #fafaf9;
+    background-image: radial-gradient(#e7e5e4 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--grafite);
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+
+/* --- STICKERS / AUTOCOLANTES BRASILEIROS --- */
+.sticker {
+    position: absolute;
+    background: var(--branco);
+    padding: 0.5rem 1rem;
+    border: 3px solid var(--borda-sticker);
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 0px var(--borda-sticker);
+    transform: rotate(-5deg);
+    z-index: 10;
+    user-select: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.sticker:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+.st-agro { top: 40px; left: 20px; background: var(--amarelo-sticker); }
+.st-brazil { top: 25px; right: 30px; background: var(--azul-sticker); color: white; }
+.st-sust { bottom: -15px; left: 30px; background: var(--verde-pop); }
+
+
+/* --- HEADER --- */
+header {
+    background: linear-gradient(135deg, var(--azul-ceu), var(--amarelo-manteiga));
+    padding: 4rem 1rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid var(--borda-sticker);
+    margin-bottom: 2rem;
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--verde-musgo);
+    text-shadow: 3px 3px 0px var(--branco), 6px 6px 0px var(--borda-sticker);
+    margin-bottom: 1rem;
+}
+
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--branco);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 3px solid var(--borda-sticker);
+    border-radius: 50px;
+    box-shadow: 4px 4px 0px var(--borda-sticker);
+}
+
+
+/* --- CONTAINER PRINCIPAL --- */
+.grid-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+
+@media (max-width: 900px) {
+    .grid-layout { grid-template-columns: 1fr; }
+}
+
+
+/* --- CARDS ESTILO SCRAPBOOK --- */
+.card {
+    background: var(--branco);
+    border: 4px solid var(--borda-sticker);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 8px 8px 0px var(--borda-sticker);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+.card h2 {
+    font-size: 1.8rem;
+    color: var(--verde-musgo);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background: var(--azul-ceu);
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--borda-sticker);
+}
+
+
+p { margin-bottom: 1rem; font-size: 1.05rem; }
+
+
+/* --- GALERIA DE IMAGENS --- */
+.brazil-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+@media (max-width: 600px) {
+    .brazil-gallery { grid-template-columns: 1fr; }
+}
+
+
+.gallery-box {
+    border: 3px solid var(--borda-sticker);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--branco);
+    box-shadow: 5px 5px 0px var(--borda-sticker);
+}
+
+
+.gallery-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--borda-sticker);
+}
+
+
+.gallery-box .desc {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: var(--amarelo-manteiga);
+}
+
+
+/* --- COMPONENTES INTERATIVOS --- */
+.interactive-box {
+    background: #f8fafc;
+    border: 3px dashed var(--verde-musgo);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+/* Inputs e Botões */
+button {
+    background: var(--verde-pop);
+    color: var(--grafite);
+    font-weight: 800;
+    padding: 0.8rem 1.5rem;
+    border: 3px solid var(--borda-sticker);
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--borda-sticker);
+    transition: all 0.1s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--borda-sticker);
+}
+
+
+.quiz-option {
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--verde-musgo);
+    cursor: pointer;
+}
+
+
+input[type="range"] {
+    width: 100%;
+    margin: 1rem 0;
+    accent-color: var(--verde-musgo);
+    cursor: pointer;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 3px solid var(--borda-sticker);
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+
+/* Mural de Notas */
+.mural-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.post-it {
+    background: var(--amarelo-manteiga);
+    padding: 1rem;
+    border: 3px solid var(--borda-sticker);
+    box-shadow: 4px 4px 0px var(--borda-sticker);
+    width: 150px;
+    min-height: 110px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.result-text {
+    margin-top: 1rem;
+    font-weight: 800;
+    font-size: 1.05rem;
+}

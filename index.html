@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap&quot; rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="sticker st-agro">🚜 Agro Top</div>
+        <div class="sticker st-brazil">🇧🇷 Made in BR</div>
+        <h1>Agrinho 2026</h1>
+        <p>Agro Forte, Futuro Sustentável 🌿</p>
+    </header>
+
+
+    <div class="grid-layout">
+        
+        <main>
+            <div class="card">
+                <div class="sticker st-sust">✨ 100% Eco</div>
+                <h2>Conexão Verde</h2>
+                <p>O agro brasileiro é gigante! Unir a tecnologia das máquinas no campo com a preservação de florestas nativas é o nosso superpoder para garantir o futuro do planeta.</p>
+                
+                <div class="brazil-gallery">
+                    <div class="gallery-box">
+                        <img src="https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=600&quot; alt="Tecnologia no Mato Grosso">
+                        <div class="desc">📍 Alta tecnologia poupa espaço e protege o solo (Mato Grosso).</div>
+                    </div>
+                    <div class="gallery-box">
+                        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&q=80&w=600&quot; alt="Biodiversidade de Frutas Brasileiras">
+                        <div class="desc">📍 Comida de verdade produzida em equilíbrio com a natureza.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h2>Deixe sua Marca 📝</h2>
+                <p>O que você faz no seu dia a dia que ajuda o meio ambiente? Escreva abaixo e cole no nosso mural virtual!</p>
+                
+                <input type="text" id="ideia-input" placeholder="Ex: Economizo água / Reciclo o lixo...">
+                <button onclick="adicionarNota()">Colar Sticker</button>
+
+
+                <div class="mural-container" id="mural">
+                    <div class="post-it" style="transform: rotate(-3deg);">Plantei uma árvore frutífera! 🌳</div>
+                    <div class="post-it" style="background:var(--azul-ceu); transform: rotate(2deg);">Evito usar plástico 🛍️</div>
+                </div>
+            </div>
+        </main>
+
+
+        <aside>
+            <div class="card">
+                <h2>Eco Quiz</h2>
+                <p><strong>Qual sistema combina lavoura, pecuária e floresta no mesmo espaço?</strong></p>
+                
+                <div class="quiz-option">
+                    <input type="radio" id="q1" name="quiz" value="errado">
+                    <label for="q1">Monocultura Tradicional</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q2" name="quiz" value="certo">
+                    <label for="q2">Sistema ILPF (Sustentável)</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q3" name="quiz" value="errado">
+                    <label for="q3">Desmatamento Legal</label>
+                </div>
+                
+                <button onclick="verificarQuiz()">Enviar Resposta</button>
+                <div id="quiz-resultado" class="result-text"></div>
+            </div>
+
+
+            <div class="card">
+                <h2>Simulador Campo 🌾</h2>
+                <p>Mova a barra abaixo para alterar o nível de tecnologia da fazenda e ver o impacto ambiental:</p>
+                
+                <input type="range" id="tech-range" min="1" max="3" value="1" oninput="calcularImpacto()">
+                
+                <div class="interactive-box" id="impacto-box" style="background: #fecdd3;">
+                    <strong>Status da Fazenda:</strong>
+                    <p id="impacto-status" style="margin-top:0.5rem; font-weight:bold;">🚨 Baixa tecnologia: Desperdício de água elevado e baixa produtividade por hectare.</p>
+                </div>
+            </div>
+        </aside>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
